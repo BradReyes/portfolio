@@ -27,6 +27,32 @@ $(function() {
 	    );
 	}
 	;
+  $(".post").bind('click', function(e) {
+    var $extra, height_animate, id;
+    id = $(this).attr('id');
+    $extra = $("#extra" + id);
+    if ($extra.attr('status') === "closed") {
+      height_animate = $extra.attr('ht');
+      if (height_animate == null) {
+        height_animate = $extra.children().first().height();
+      } else {
+        height_animate = parseInt(height_animate);
+      }
+      $extra.attr('status', 'open');
+      return $extra.velocity({
+        height: (height_animate + 10) + "px"
+      }, {
+        duration: 500
+      });
+    } else {
+      $extra.attr('status', 'closed');
+      return $extra.velocity({
+        height: "160px"
+      }, {
+        duration: 500
+      });
+    }
+  });
   revert = function() {
     if (isElementInViewport($("#invisible-line-2"))) {
       $("#cover-page").velocity("reverse");

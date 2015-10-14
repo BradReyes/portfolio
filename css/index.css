@@ -2,7 +2,7 @@ body {
 	padding-top: 440px;
 	background-color: #F5F8FA;
 	font-family: Arial, sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	color: #292F33;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 .post iframe {
 	width:95%;
-	height: 300px;
+	height: auto;
 	padding-top: 7px;
 	padding-bottom: 7px;
 }
@@ -165,7 +165,7 @@ ul li.active:after{
 
 .project-title span {
 	color: #8899a6;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: normal;
 }
 
@@ -175,6 +175,7 @@ ul li.active:after{
 
 .project-description {
 	padding-right: 30px;
+	margin-top: -7px;
 }
 
 .links {
@@ -190,6 +191,7 @@ ul li.active:after{
 .project-text {
 	margin-left: -17px;
 	margin-right: 0px;
+	margin-top: 10px;
 }
 
 .app-icon {
@@ -202,6 +204,11 @@ ul li.active:after{
 	font-weight: bold;
 	font-size: 24px;
 	margin-bottom: 20px;
+}
+
+.extra {
+	overflow: hidden;
+	height: 160px;
 }
 
 #profile {

@@ -91,7 +91,7 @@
 			<div id='feed-outline'>
 
 				<!-- POST 1 -->
-				<div class='row bottom-line post'>
+				<div id='1' class='row bottom-line post'>
 					<br>
 					<!-- PICTURE COLUMN -->
 					<div class='col-md-2 col-md-offset-1 block-left'>
@@ -99,6 +99,7 @@
 					</div>
 
 					<!-- DETAILS COLUMN -->
+
 					<div class='col-md-8 project-text'>
 						<!-- Title -->
 						<div class='row'>
@@ -120,7 +121,11 @@
 								<!-- <iframe volume="0" src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1">
 								</iframe> -->
 								    <!-- 1. The <div> tag will contain the <iframe> (and video player) -->
-								<div id="player"></div>
+								   <div id='extra1' class='extra' ht='180' status='closed'>
+								<div id="player">
+								</div>
+								<p> Extra Info Here </p>
+								</div>
 								<script>      // 2. This code loads the IFrame Player API code asynchronously.
 								      var tag = document.createElement('script');
 								      tag.src = "http://www.youtube.com/player_api";
@@ -132,8 +137,8 @@
 								      var player;
 								      function onYouTubePlayerAPIReady() {
 								        player = new YT.Player('player', {
-								          playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque' },
-								          videoId: 'JW5meKfy3fY',
+								          playerVars: { 'autoplay': 1, 'loop': 1, 'playlist': 'AgGDJLYZ3sM', 'controls': 1,'autohide':1,'wmode':'opaque' },
+								          videoId: 'AgGDJLYZ3sM',
 								          events: {
 								            'onReady': onPlayerReady}
 								        });
@@ -167,7 +172,7 @@
 				</div>
 
 				
-				<div class='row bottom-line post'>
+				<div id='2' class='row bottom-line post'>
 					<br>
 					<!-- PICTURE COLUMN -->
 					<div class='col-md-2 col-md-offset-1 block-left'>
@@ -190,6 +195,10 @@
 								</p>
 								<p class='project-description'> Ultimately, it was useless and I wasted my time though. It kind of sucks that that happened.
 								</p>
+
+								<div id='extra2' class='extra' status='closed'>
+									<img src='https://lh5.ggpht.com/U6NlZtWbo3K7PTEbrs0WDq5ktPuTs07njt8cS_d9nIeklNoskpwFeSWPt3s4cgBAJOY=h900'>
+								</div>
 							</div>
 						</div>
 

@@ -31,6 +31,27 @@ $ ->
 	}
 	`
 
+	$(".post").bind 'click', (e) ->
+		id = $(@).attr 'id'
+		$extra = $("#extra#{id}")
+		if $extra.attr('status') is "closed"
+			height_animate = $extra.attr('ht')
+			if not height_animate?
+				height_animate = $extra.children().first().height()
+			else
+				height_animate = parseInt height_animate
+			$extra.attr('status', 'open')
+			$extra.velocity
+				height: "#{height_animate + 10}px"
+			,
+				duration: 500
+		else
+			$extra.attr('status', 'closed')
+			$extra.velocity
+				height: "160px"
+			,
+				duration: 500
+
 	revert = () ->
 		if isElementInViewport($("#invisible-line-2"))
 			$("#cover-page").velocity("reverse")
