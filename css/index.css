@@ -1,0 +1,139 @@
+body {
+	padding-top: 380px;
+	background-color: #F5F8FA;
+}
+
+.header {
+	font-size: 40px;
+}
+
+.subheader {
+	font-size: 24px;
+}
+
+.title {
+	color: white;
+}
+
+#invisible-line {
+	position: absolute;
+	top: 695px;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+}
+
+#invisible-line-2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+}
+
+
+.outline {
+	border: 2px solid black;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#feed-outline {
+	border: 1px solid #BBBBBB;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	background-color: white;
+}
+
+.bottom-line {
+	border-bottom: 1px solid #BBBBBB;
+}
+
+.project-description {
+	padding: 0px;
+	margin-left: -10px;
+	font-size: 20px;
+	padding-right: 30px;
+}
+
+.center-img {
+	display:block;
+    margin:0 auto;
+}
+
+.app-icon {
+	padding-left: 10%;
+}
+
+.neg-margin {
+	margin-left: -10px;
+}
+
+.neg-margin-half {
+	margin-left: -5px;
+}
+
+.feed-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#profile {
+	border-radius: 100px;
+	border: 2px solid white;
+}
+
+#nav-links {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#cover-page {
+	/*height: 230px;*/
+  /*background: -webkit-gradient(linear, left top, right top, from(rgba(0, 207, 150, 1)), to(rgba(73, 173, 233, 1)));*/
+  /*rgba(0, 207, 150, 0.5); /* #00CF96 */
+  /*rgba(73, 173, 233, 0.5); /* #49ADE9 */
+  overflow: hidden;
+
+  background: -webkit-linear-gradient(left, rgba(73, 173, 233, 1), rgba(0, 207, 150, 1));
+
+
+ /* background: -moz-linear-gradient(left, rgba(73, 173, 233, 0.9), rgba(0, 207, 150, 0.9));
+
+ 
+  background: -ms-linear-gradient(left, rgba(73, 173, 233, 0.9), rgba(0, 207, 150, 0.9));
+
+
+  background: -o-linear-gradient(left, rgba(73, 173, 233, 0.9), rgba(0, 207, 150, 0.9));*/
+  /*background-color: #B1B8BD;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+  
+    background-image: url('../img/Twitter.png');
+
+   
+    background-image: url('../img/Twitter.png'), 
+                      -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
+    background-image: url('../img/Twitter.png'), 
+                      -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ADB2B6), color-stop(100%, #ABAEB3));
+    background-image: url('../img/Twitter.png'), 
+                      linear-gradient(to bottom, #ADB2B6, #ABAEB3);
+
+  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADB2B6', endColorstr='#ABAEB3', GradientType=0);*/
+}
+
+#pic {
+	background-image: url('../img/back3.jpg');
+	background-size: 100%;
+}
+
+/* navbar */
+.navbar-default {
+	background-color: #FFFFFF;
+}
