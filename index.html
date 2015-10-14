@@ -1,6 +1,7 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,22 +48,12 @@
 
 	    <div id='nav-links' class='row'>
 		    <div class='col-md-12'>
-		    <!-- <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Brand</a>
-		    </div> -->
-
 		    <div class="collapse navbar-collapse">
-		    	<ul class='nav navbar-nav'>
-    				<li class="active">About Me</li>
-     				<li>Skills</li>
-     				<li>Projects</li>
-     				<li>Experience</li>
+		    	<ul id='nav-id' class='nav navbar-nav'>
+    				<li id = 'A'>About Me</li>
+     				<li id= 'P' class="active">Projects</li>
+     				<li id='S'>Skills</li>
+     				<li id='E'>Experience</li>
      				<li id='last-li'>Contact Me</li>
     				<div class="clearfix"></div>
 				</ul>
@@ -75,7 +66,7 @@
 	<div id='feed-content' class='container'>
 
 	<!-- This is the title of the current columns -->
-	<div class='row'>
+	<div class='projects row'>
 		<div class='text-center col-md-12'>
 			<p id='feed-title' class='feed-title'> Personal, Job, and School Projects </p>
 		</div>
@@ -84,7 +75,7 @@
 
 
 	<!-- This contains the projects section -->
-	<div class='row'>
+	<div class='projects row'>
 		<!-- one column right in the middle that is offset -->
 		<div class='col-md-6 col-md-offset-3'>
 			<!-- FEEDS/PROJECTS ARE LISTED HERE -->
@@ -154,14 +145,14 @@
 
 						<!-- Links -->
 						<div class='links row'>
-							<div class='col-md-3'>
-								<a href="https://google.com"> Website </a>
+							<div class='col-md-2'>
+								<a href="https://google.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Write-Up"><i class="fa fa-file-image-o"></i></a>
 							</div>
-							<div class='col-md-3'>
-								<a href="https://google.com"> GitHub </a>
+							<div class='col-md-2'>
+								<i class="fa fa-file-image-o"></i>
 							</div>
-							<div class='col-md-3'>
-								<a href="https://google.com"> Demo </a>
+							<div class='col-md-2'>
+								<i class="fa fa-file-image-o"></i>
 							</div>
 						</div>
 
@@ -270,6 +261,31 @@
 		</div>
 
 	</div>
+
+
+
+	<!-- Loading screen here-->
+	<div id='load' class='row'>
+		<div class='col-md-2 col-md-offset-5'>
+		<img class='loading center-block' src='img/loading.gif'>
+		</div>
+	</div>
+
+	<!-- PAGE NOT YET IMPLEMENTED SECTION -->
+	<div id='not-done' class='row'>
+		<div class='col-md-12'>
+			<p class='text-center' style='font-size: 24px;'> Page Not Yet Implemented </p>
+		</div>
+	</div>
+
+	<!-- ABOUT ME FEED RIGHT HERE -->
+	<div class='about-me' class='row'>
+		<div class='col-md-12'>
+			<p style='font-size: 24px;'> SOON!!!! </p>
+		</div>
+	</div>
+
+
 	</div>
 </body>
 </html>

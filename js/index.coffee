@@ -1,5 +1,15 @@
 # This runs immediately once the DOM loads and all libraries are loaded
 $ ->
+	$("a[data-toggle='tooltip']").tooltip();
+
+	$("#load").css
+		display: 'none'
+	$("#not-done").css
+		display: 'none'
+	$(".about-me").css
+		display: 'none'
+
+
 	$(window).unload ()->
 		$('body').scrollTop(0)
 
@@ -31,7 +41,16 @@ $ ->
 	}
 	`
 
-	$(".post").bind 'click', (e) ->
+	dont_animate = false
+
+	$("a[data-toggle='tooltip']").bind 'click', ()->
+		dont_animate = true
+
+
+	$(".post:not(a[data-toggle='tooltip'])").bind 'click', (e) ->
+		if dont_animate
+			dont_animate = false
+			return
 		id = $(@).attr 'id'
 		$extra = $("#extra#{id}")
 		if $extra.attr('status') is "closed"
@@ -114,7 +133,7 @@ $ ->
 			,
 				duration: 500
 			$('.header').velocity
-				translateY: '-153px'
+				translateY: '-150px'
 			,
 				duration: 500
 
@@ -122,3 +141,77 @@ $ ->
 			$(window).scroll revert
 
 	$(window).scroll expand
+
+	tabs =
+		'About Me': 'A'
+		'Skills': 'S'
+		'Projects': 'P'
+		'Experience': 'E'
+		'Contact Me': 'last-li'
+
+	# add the tabs
+	clone = $("#player").first().clone(true)
+
+	$("#nav-id").bind 'click', (e)->
+		clone = $("#player").first().clone(true)
+		$clicked = $(e.target)
+		if $clicked.prop("tagName") is "LI"
+			new_tab = $clicked.text()
+			new_tab = tabs["#{new_tab}"]
+			$new_tab = $("##{new_tab}")
+			$(".active").first().removeClass 'active'
+			$new_tab.addClass "active"
+
+			# now we 'reload' the page
+
+			#first the tabs that are not implemented
+			if new_tab is 'S' or new_tab is 'E' or new_tab is 'last-li'
+				$('.about-me').css
+					display: 'none'
+				$("#not-done").css
+					display: 'none'
+				$(".projects").css
+					display: 'none'
+				$("#load").css
+					display: 'block'
+
+				setTimeout ()->
+					$("#not-done").css
+						display: 'block'
+					$("#load").css
+						display: 'none'
+				, 300
+			else if new_tab is 'P'
+				$('.about-me').css
+					display: 'none'
+				$("#not-done").css
+					display: 'none'
+				$(".projects").css
+					display: 'none'
+				$("#load").css
+					display: 'block'
+
+				setTimeout ()->
+					$(".projects").css
+						display: 'block'
+					$("#load").css
+						display: 'none'
+					$("#player").first().remove()
+					$("#extra1").prepend(clone)
+				, 300
+			else #about me
+				$('.about-me').css
+					display: 'none'
+				$("#not-done").css
+					display: 'none'
+				$(".projects").css
+					display: 'none'
+				$("#load").css
+					display: 'block'
+
+				setTimeout ()->
+					$(".about-me").css
+						display: 'block'
+					$("#load").css
+						display: 'none'
+				, 300

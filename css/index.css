@@ -153,6 +153,14 @@ ul li.active:after{
 	background-color: white;
 }
 
+
+.tooltip.bottom .tooltip-inner {
+    background-color: #292F33;
+  }
+.tooltip.bottom .tooltip-arrow {
+          border-bottom-color: #292F33;
+       }  
+
 .project-title {
 	font-weight: bold;
 }
@@ -169,6 +177,16 @@ ul li.active:after{
 	font-weight: normal;
 }
 
+.fa {
+	color: #8899a6;
+	font-size: 25px;
+}
+
+.loading {
+	width: 100px;
+	height: 100px;
+}
+
 .bottom-line {
 	border-bottom: 1px solid #E0E8ED;
 }
@@ -179,8 +197,8 @@ ul li.active:after{
 }
 
 .links {
-	margin-top: 10px;
-	margin-bottom: 2px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .center-img {
