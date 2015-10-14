@@ -1,6 +1,89 @@
 body {
-	padding-top: 380px;
+	padding-top: 470px;
 	background-color: #F5F8FA;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	color: #292F33;
+}
+
+.post:hover {
+	background-color: #F5F8FA;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+ul {
+    list-style: none outside none;
+}
+
+ul li:not(:last-child) {
+    border-right:1px solid #DDDDDD;
+    /*margin-right:20px;*/
+  /*  margin-left: 0.1px;
+    margin-left: 0.1px;*/
+    /*margin-right: 1px;*/
+    /*padding-right:20px;*/
+    /*float:left;*/
+}
+
+#last-li {
+	border-right:0px;
+}
+
+ul li {
+	text-decoration: none;
+	margin-left: 0.5px;
+	color: #43ACEC;
+	font-size: 18px;
+    cursor: pointer;
+    /*float: left;*/
+    margin: 0;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    position: relative;
+    text-align:center;
+    border-bottom: 0px solid #43ACEC;
+
+}
+.clearfix {
+    clear: both;
+}
+
+ul li:hover:after,
+ul li.active:after{
+	/*margin-left: 0.5px;*/
+	margin-left: 0.4px;
+    border-bottom: 5px solid #43ACEC;
+    bottom: -1px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 199px;
+    -webkit-animation: borderGrow 0.07s;
+  	animation: borderGrow 0.07s;
+  	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes borderGrow {
+  from {
+    border-bottom: 0px solid #43ACEC;
+  }
+  to {
+    border-bottom: 4px solid #43ACEC;
+  }
 }
 
 .header {
@@ -42,22 +125,40 @@ body {
 }
 
 #feed-outline {
-	border: 1px solid #BBBBBB;
+	border: 1px solid #E0E8ED;
 	border-radius: 10px;
 	margin-bottom: 30px;
 	overflow: hidden;
 	background-color: white;
 }
 
+.project-title {
+	font-weight: bold;
+}
+
+.post {
+	line-height: 18px;
+	margin-right: -50px;
+	cursor: pointer;
+}
+
+.project-title span {
+	color: #8899a6;
+	font-size: 14px;
+	font-weight: normal;
+}
+
 .bottom-line {
-	border-bottom: 1px solid #BBBBBB;
+	border-bottom: 1px solid #E0E8ED;
 }
 
 .project-description {
-	padding: 0px;
-	margin-left: -10px;
-	font-size: 20px;
 	padding-right: 30px;
+}
+
+.links {
+	margin-top: 10px;
+	margin-bottom: 2px;
 }
 
 .center-img {
@@ -65,20 +166,18 @@ body {
     margin:0 auto;
 }
 
+.project-text {
+	margin-left: -17px;
+	margin-right: 0px;
+}
+
 .app-icon {
-	padding-left: 10%;
-}
-
-.neg-margin {
-	margin-left: -10px;
-}
-
-.neg-margin-half {
-	margin-left: -5px;
+	width: 60px; /* was 60 */
+	height: 60px;
+	border-radius: 5px;
 }
 
 .feed-title {
-	font-size: 20px;
 	font-weight: bold;
 }
 
