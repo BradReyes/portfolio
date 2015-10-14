@@ -1,12 +1,12 @@
 # This runs immediately once the DOM loads and all libraries are loaded
 $ ->
-
-	# $(window).on 'beforeunload', ()->
-	# 	$(window).scrollTop(0)
-	# 	"Fuck"
-
 	$(window).unload ()->
 		$('body').scrollTop(0)
+
+	height = window.innerHeight + 4
+	$("#invisible-line").css
+		top: height
+
 
 	`
 	function isElementInViewport (el) {
@@ -43,9 +43,13 @@ $ ->
 			,
 				duration: 500
 				complete: ()->
-					$(".subheader").velocity 'fadeIn',
+					$(".subheader").velocity
+						opacity: 0.85
+					,
 						duration: 300
-					$('#profile').velocity 'fadeIn',
+					$('#profile').velocity
+						opacity: 1
+					,
 						duration: 300
 			$(window).unbind('scroll')
 			$(window).scroll expand
@@ -54,17 +58,13 @@ $ ->
 		if isElementInViewport($('#invisible-line'))
 			console.log "In View"
 			$("#cover-page").velocity
-				height: '110px'
+				height: '80px'
 			,
 				duration: 500
 			$("#feed-content").velocity
 				translateY: '-230px'
 			,
 				duration: 500
-			# $(".subheader").velocity 'fadeOut',
-			# 	duration: 300
-			# $('#profile').velocity 'fadeOut',
-			# 	duration: 300
 
 			$(".subheader").velocity
 				opacity: 0
@@ -75,7 +75,7 @@ $ ->
 			,
 				duration: 300
 			$('.header').velocity
-				translateY: '-157px'
+				translateY: '-153px'
 			,
 				duration: 500
 

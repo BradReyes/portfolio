@@ -1,5 +1,5 @@
 body {
-	padding-top: 470px;
+	padding-top: 440px;
 	background-color: #F5F8FA;
 	font-family: Arial, sans-serif;
 	font-size: 15px;
@@ -47,6 +47,7 @@ ul li {
 	margin-left: 0.5px;
 	color: #43ACEC;
 	font-size: 18px;
+	font-weight: 200;
     cursor: pointer;
     /*float: left;*/
     margin: 0;
@@ -87,11 +88,18 @@ ul li.active:after{
 }
 
 .header {
-	font-size: 40px;
+	font-family: Lato, Arial, sans-serif;
+	font-size: 55px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	margin-top: 7px;
+
 }
 
 .subheader {
+	opacity: 0.85;
 	font-size: 24px;
+	font-weight: lighter;
 }
 
 .title {
@@ -179,11 +187,15 @@ ul li.active:after{
 
 .feed-title {
 	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 #profile {
 	border-radius: 100px;
 	border: 2px solid white;
+	width: 120px;
+	height: 120px;
 }
 
 #nav-links {
