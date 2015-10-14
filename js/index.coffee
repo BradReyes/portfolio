@@ -7,6 +7,10 @@ $ ->
 	$("#invisible-line").css
 		top: height
 
+	console.log $("#player")[0]
+	# $("#player").on 'click', ()->
+	# 	$("#player").prop('muted', false); 
+
 
 	`
 	function isElementInViewport (el) {
@@ -42,15 +46,27 @@ $ ->
 				translateY: '0px'
 			,
 				duration: 500
-				complete: ()->
-					$(".subheader").velocity
-						opacity: 0.85
-					,
-						duration: 300
-					$('#profile').velocity
-						opacity: 1
-					,
-						duration: 300
+				# complete: ()->
+					# $(".subheader").velocity
+					# 	opacity: 0.85
+					# ,
+					# 	duration: 300
+					# $('#profile').velocity
+					# 	opacity: 1
+					# ,
+					# 	duration: 300
+			$(".subheader").velocity
+				opacity: 0.85
+				translateY: '0px'
+			,
+				duration: 500
+			$('#profile').velocity
+				opacity: 1
+				translateY: '0px'
+			,
+				duration: 500
+
+
 			$(window).unbind('scroll')
 			$(window).scroll expand
 
@@ -68,12 +84,14 @@ $ ->
 
 			$(".subheader").velocity
 				opacity: 0
+				translateY: '-150px'
 			,
-				duration: 300
+				duration: 500
 			$('#profile').velocity
 				opacity: 0
+				translateY: '-150px'
 			,
-				duration: 300
+				duration: 500
 			$('.header').velocity
 				translateY: '-153px'
 			,

@@ -8,6 +8,7 @@ $(function() {
   $("#invisible-line").css({
     top: height
   });
+  console.log($("#player")[0]);
   
 	function isElementInViewport (el) {
 
@@ -36,19 +37,19 @@ $(function() {
       $('.header').velocity({
         translateY: '0px'
       }, {
-        duration: 500,
-        complete: function() {
-          $(".subheader").velocity({
-            opacity: 0.85
-          }, {
-            duration: 300
-          });
-          return $('#profile').velocity({
-            opacity: 1
-          }, {
-            duration: 300
-          });
-        }
+        duration: 500
+      });
+      $(".subheader").velocity({
+        opacity: 0.85,
+        translateY: '0px'
+      }, {
+        duration: 500
+      });
+      $('#profile').velocity({
+        opacity: 1,
+        translateY: '0px'
+      }, {
+        duration: 500
       });
       $(window).unbind('scroll');
       return $(window).scroll(expand);
@@ -68,14 +69,16 @@ $(function() {
         duration: 500
       });
       $(".subheader").velocity({
-        opacity: 0
+        opacity: 0,
+        translateY: '-150px'
       }, {
-        duration: 300
+        duration: 500
       });
       $('#profile').velocity({
-        opacity: 0
+        opacity: 0,
+        translateY: '-150px'
       }, {
-        duration: 300
+        duration: 500
       });
       $('.header').velocity({
         translateY: '-153px'
